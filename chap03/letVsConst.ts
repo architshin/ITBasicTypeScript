@@ -1,3 +1,5 @@
+export{}
+
 let num1: number = 56;
 const num2: number = 35;
 console.log(num1);
