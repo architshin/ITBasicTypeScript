@@ -8,11 +8,11 @@ const nameList: {[key: number]: string;} =
 	156: "井上", 
 	556: "上田"
 };
-for(let key in nameList) {
+for(const key in nameList) {
 	console.log(`ID番号${key}: ${nameList[key]}`);
 }
 nameList[556] = "上野";
 nameList[551] = "野宮";
-for(let key in nameList) {
+for(const key in nameList) {
 	console.log(`ID番号${key}: ${nameList[key]}`);
 }
