@@ -1,15 +1,13 @@
 export{}
 
-const studentNumbersList: {[key:string]: number} =
-{
-	"A": 35,
-	"B": 36,
-	"C": 35,
-	"D": 37,
-	"E": 34
-};
-for(const key in studentNumbersList) {
-	console.log(`${key}組の人数: ${studentNumbersList[key]}`);
+const heightList: {[key:string]: number} = {};
+heightList["Tomoko"] = 155.4;
+heightList["Yumi"] = 162.3;
+heightList["Ayaka"] = 157.9;
+heightList["Rina"] = 170.2;
+heightList["Yoshie"] = 153.7;
+for(const key in heightList) {
+	console.log(`${key}さんの身長: ${heightList[key]}`);
 }
-studentNumbersList["D"] = 36;
-console.log(`D組の人数: ${studentNumbersList.D}`);
+heightList.Yoshie = 154.6;
+console.log(`Yoshieさんの身長: ${heightList["Yoshie"]}`);
