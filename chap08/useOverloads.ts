@@ -1,17 +1,17 @@
 export{}
 
-function descOneself(name: string, age: number);
 function descOneself(name: string, message: string);
-function descOneself(name: string, ageOrMsg: number|string) {
+function descOneself(name: string, month: number, day: number);
+function descOneself(name: string, msgOrMonth: number|string, day?: number) {
 	let desc = `こんにちは、${name}です。`;
-	if(typeof ageOrMsg == "string") {
-		desc += ageOrMsg;
+	if(typeof msgOrMonth == "string") {
+		desc += msgOrMonth;
 	}
 	else {
-		desc += `年齢は${ageOrMsg}歳です。`;
+		desc += `${msgOrMonth}月${day}日生まれです。`;
 	}
 	console.log(desc);
 }
 
-descOneself("江藤", 24);
 descOneself("江藤", "よろしくお願いします!");
+descOneself("江藤", 6, 12);
