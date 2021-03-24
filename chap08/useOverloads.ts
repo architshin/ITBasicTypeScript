@@ -6,8 +6,7 @@ function descOneself(name: string, msgOrMonth: number|string, day?: number) {
 	let desc = `こんにちは、${name}です。`;
 	if(typeof msgOrMonth == "string") {
 		desc += msgOrMonth;
-	}
-	else {
+	} else {
 		desc += `${msgOrMonth}月${day}日生まれです。`;
 	}
 	console.log(desc);
