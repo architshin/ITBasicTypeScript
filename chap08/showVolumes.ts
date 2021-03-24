@@ -2,7 +2,7 @@ export{}
 
 function calcVolume(edge: number): number;
 function calcVolume(width: number, height: number, depth: number): number;
-function calcVolume(edge:number, height?: number, depth?: number): number {
+function calcVolume(edge: number, height?: number, depth?: number): number {
 	let volume = 0;
 	if(height == undefined) {
 		volume = edge ** 3;
