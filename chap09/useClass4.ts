@@ -20,7 +20,7 @@ class Student {
 
 	showScoresAvg() {
 		const sum = this.english + this.math + this.japanese;
-		const avg = Math.round(sum/3);
+		const avg = Math.round(sum / 3 * 10) / 10;
 		console.log(`${this.name}の平均点: ${avg}`);
 
 	}
