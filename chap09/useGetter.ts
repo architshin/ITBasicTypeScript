@@ -14,13 +14,11 @@ class Student {
 	}
 	
 	showScoresSum() {
-		const sum = this.english + this.math + this.japanese;
-		console.log(`${this.name}の合計得点: ${sum}`);
+		console.log(`${this.name}の合計得点: ${this.total}`);
 	}
 
 	showScoresAvg() {
-		const sum = this.english + this.math + this.japanese;
-		const avg = Math.round(sum/3);
+		const avg = Math.round(this.total / 3 * 10) / 10;
 		console.log(`${this.name}の平均点: ${avg}`);
 
 	}
