@@ -21,6 +21,14 @@ class Greetings extends Hello {
 	}
 }
 
+class OverHello extends Hello {
+	sayHello() {
+		console.log(`${this.name}さん、まいど。`)
+	}
+}
+
 const taro = new Greetings("江口太郎");
 taro.sayGoodMorning();
 taro.sayHello();
+const jiro = new OverHello("坂本次郎");
+jiro.sayHello();
