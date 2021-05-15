@@ -1,34 +1,43 @@
+//天気情報を表すクラス。
 export class WeatherInfo {
+	//天気情報JSONデータオブジェクト。
 	private _weatherInfoJSON: WeatherInfoJSON;
+	
+	//コンストラクタ。
 	constructor(weatherInfoJSON: WeatherInfoJSON) {
 		this._weatherInfoJSON = weatherInfoJSON; 
 	}
 
+	//都市名を得るゲッタ。
 	get cityName() {
 		return this._weatherInfoJSON.name;
 	}
+	//緯度情報を得るゲッタ。
+	get latitude() {
+		const coord = this._weatherInfoJSON.coord;
+		return coord.lat;
+	}
+	//経度情報を得るゲッタ。
+	get longitude() {
+		const coord = this._weatherInfoJSON.coord;
+		return coord.lon;
+	}
+	//天気情報を得るゲッタ。
 	get weatherDesc() {
 		const weatherArray = this._weatherInfoJSON.weather;
 		const weather = weatherArray[0];
 		return weather.description;
 	}
-	get latitude() {
-		const coord = this._weatherInfoJSON.coord;
-		return coord.lat;
-	}
-	get longitude() {
-		const coord = this._weatherInfoJSON.coord;
-		return coord.lon;
-	}
 }
 
+//天気情報JSONのデータ形式を定義したインターフェース。
 interface WeatherInfoJSON {
 	coord:
 		{
 			lon: number,
 			lat: number
 		},
-	weather: { id: number, main: string, description: string, icon: string }[],
+	weather: {id: number, main: string, description: string, icon: string}[],
 	base: string,
 	main: 
 		{
