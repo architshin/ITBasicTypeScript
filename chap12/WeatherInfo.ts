@@ -1,8 +1,7 @@
 export class WeatherInfo {
 	private _weatherInfoJSON: WeatherInfoJSON;
-	constructor(weatherInfoJSONStr: string) {
-		weatherInfoJSONStr = JSON.stringify(weatherInfoJSONStr);
-		this._weatherInfoJSON = JSON.parse(weatherInfoJSONStr);
+	constructor(weatherInfoJSON: WeatherInfoJSON) {
+		this._weatherInfoJSON = weatherInfoJSON; 
 	}
 
 	get cityName() {
