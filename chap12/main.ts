@@ -6,7 +6,7 @@ import {WeatherInfo} from "./WeatherInfo";
 //アクセス先URLの基本部分の変数を用意。
 const weatherinfoUrl = "http://api.openweathermap.org/data/2.5/weather?lang=ja";
 //APIキーの変数を用意。ここに各自の文字列を記述する!!
-const appId = "913136635cfa3182bbe18e34ffd44849";
+const appId = "";
 //都市名を表す変数を用意。
 let q = "Himeji";
 
