@@ -16,9 +16,9 @@ const urlFull = `${weatherinfoUrl}&q=${q}&appid=${appId}`;
 const promise = receiveWeatherInfo(urlFull);
 //非同期処理が成功した場合の処理を定義。
 promise.then(
-	function(response: WeatherInfo) {
+	function(weatherInfo: WeatherInfo) {
 		//WeatherInfoオブジェクトから必要情報を取得して表示文字列を生成。
-		const message = `現在の${response.cityName}の天気は、${response.weatherDesc}です。\n緯度は${response.latitude}で軽度は${response.longitude}です。`;
+		const message = `現在の${weatherInfo.cityName}の天気は、${weatherInfo.weatherDesc}です。\n緯度は${weatherInfo.latitude}で軽度は${weatherInfo.longitude}です。`;
 		//表示。
 		console.log(message);
 	}
