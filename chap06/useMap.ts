@@ -1,18 +1,15 @@
-export{}
+// export{}
 
-const nameList: {[key: number]: string;} =
-{
-	349: "中田", 
-	451: "田村", 
-	122: "村井", 
-	156: "井上", 
-	556: "上田"
-};
-for(const key in nameList) {
-	console.log(`ID番号${key}: ${nameList[key]}`);
-}
-nameList[556] = "上野";
-nameList[551] = "野宮";
-for(const key in nameList) {
-	console.log(`ID番号${key}: ${nameList[key]}`);
+const heightList = new Map();
+heightList.set("Tomoko", 155.4);
+heightList.set("Yumi", 162.3);
+heightList.set("Ayaka", 157.9);
+heightList.set("Rina", 170.2);
+heightList.set("Yoshie", 153.7);
+
+const ayakaHight = heightList.get("Ayaka");
+console.log(`Ayakaの身長: ${ayakaHight}`);
+
+for(const [key, value] of heightList) {
+	console.log(`キーは${key}で値は${value}`);
 }
