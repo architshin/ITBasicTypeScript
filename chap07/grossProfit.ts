@@ -1,6 +1,6 @@
 export{}
 
-function showGrossProfit(sales: number, ratio = 0.7) {
+function showGrossProfit(sales: number, ratio: number = 0.7) {
 	const grossProfit = Math.round(sales * ratio * 0.9);
 	console.log(`${sales}の粗利: ${grossProfit}(粗利率${ratio})`);
 }
