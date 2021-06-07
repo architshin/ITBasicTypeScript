@@ -1,6 +1,6 @@
 export{}
 
-function showCircumference(radius: number, pi = 3.14) {
+function showCircumference(radius: number, pi: number = 3.14) {
 	const circumference = 2 * pi * radius;
 	console.log(`半径${radius}の円周の長さ: ${circumference}`);
 }
