@@ -6,5 +6,6 @@ function showRoundedElement(currentValue: number, index: number, array: number[]
 }
 
 const func = showRoundedElement;
+// const func: (currentValue: number, index: number, array: number[]) => void = showRoundedElement;
 const numList = [45.112, 78.567, 66.891, 12.223, 28.341];
 numList.forEach(func);
