@@ -1,6 +1,6 @@
 export{}
 
-class Hello {
+class Greetings {
 	// 名前のプロパティ。
 	name: string = "";
 
@@ -15,20 +15,11 @@ class Hello {
 	}
 }
 
-class Greetings extends Hello {
+class GoodMorning extends Greetings {
 	sayGoodMorning() {
 		console.log(`${this.name}さん、おはようございます`);
 	}
 }
-
-class OverHello extends Hello {
-	sayHello() {
-		console.log(`${this.name}さん、まいど。`)
-	}
-}
-
-const taro = new Greetings("江口太郎");
+const taro = new GoodMorning("江口太郎");
 taro.sayGoodMorning();
 taro.sayHello();
-const jiro = new OverHello("坂本次郎");
-jiro.sayHello();
