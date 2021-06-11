@@ -2,13 +2,17 @@ export{}
 
 class BodyMass {
 	name: string = "";
-	private _weight: number = 0;
 	private _height: number = 0;
+	private _weight: number = 0;
 
-	constructor(name: string, weight: number, height: number) {
+	constructor(name: string, height: number, weight: number) {
 		this.name = name;
-		this._weight = weight;
-		this._height = height;
+		if(height > 0) {
+			this._weight = weight;
+		}
+		if(weight > 0) {
+			this._height = height;
+		}
 	}
 
 	showBMI() {
@@ -34,18 +38,18 @@ class BodyMass {
 	}
 
 	get bmi(): number {
-		let bmi = this._weight / (this._height/100) / (this._height/100);
+		let bmi = this._weight / (this._height/100) ** 2;
 		bmi = Math.round(bmi * 10) / 10;
 		return bmi;
 	}
 
 	get idealWeight(): number {
-		let idealWeight = 22 *  (this._height/100) * (this._height/100);
+		let idealWeight = 22 *  (this._height/100) ** 2;
 		idealWeight = Math.round(idealWeight);
 		return idealWeight;
 	}
 }
 
-const nakatani = new BodyMass("中谷和弘", 68.4, 171.4);
+const nakatani = new BodyMass("中谷和弘", 171.4, 68.4);
 nakatani.showBMI();
 nakatani.showIdealWeight();
