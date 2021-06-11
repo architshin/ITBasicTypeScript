@@ -15,11 +15,19 @@ class Greetings {
 	}
 }
 
-class MyDo extends Greetings {
+class HelloWithMsg extends Greetings {
+	msg: string = "";
+
+	constructor(name: string, msg: string) {
+		super(name);
+		this.msg = msg;
+	}
+
 	sayHello() {
-		console.log(`${this.name}さん、まいど。`)
+		super.sayHello();
+		console.log(this.msg);
 	}
 }
 
-const jiro = new MyDo("坂本次郎");
-jiro.sayHello();
+const shiro = new HelloWithMsg("渡辺四郎", "いい天気ですね!");
+shiro.sayHello();

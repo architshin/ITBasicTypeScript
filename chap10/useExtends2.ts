@@ -2,7 +2,7 @@ export{}
 
 class Greetings {
 	// 名前のプロパティ。
-	name: string = "";
+	protected name: string = "";
 
 	// コンストラクタ。名前を受け取りプロパティに格納する。
 	constructor(name: string) {
@@ -15,11 +15,11 @@ class Greetings {
 	}
 }
 
-class MyDo extends Greetings {
-	sayHello() {
-		console.log(`${this.name}さん、まいど。`)
+class GoodMorning extends Greetings {
+	sayGoodMorning() {
+		console.log(`${this.name}さん、おはようございます`);
 	}
 }
-
-const jiro = new MyDo("坂本次郎");
-jiro.sayHello();
+const taro = new GoodMorning("江口太郎");
+taro.sayGoodMorning();
+taro.sayHello();
