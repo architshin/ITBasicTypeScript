@@ -32,7 +32,3 @@ const taro = new Student("宮本太郎", 78, 82, 85);
 taro.showScoresSum();
 taro.showScoresAvg();
 console.log(`合計値: ${taro.total}`);
-const hanako = new Student("松下花子", 91, 80, 87);
-hanako.showScoresSum();
-hanako.showScoresAvg();
-console.log(`合計値: ${hanako.total}`);
