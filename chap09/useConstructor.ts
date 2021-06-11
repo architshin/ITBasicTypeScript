@@ -12,6 +12,8 @@ class Student {
 		this.math = math;
 		this.japanese = japanese;
 	}
+	// constructor(public name: string, public english: number, public math: number, public japanese: number) {
+	// }
 	
 	showScoresSum() {
 		const sum = this.english + this.math + this.japanese;
@@ -28,6 +30,3 @@ class Student {
 const taro = new Student("宮本太郎", 78, 82, 85);
 taro.showScoresSum();
 taro.showScoresAvg();
-const hanako = new Student("松下花子", 91, 80, 87);
-hanako.showScoresSum();
-hanako.showScoresAvg();
