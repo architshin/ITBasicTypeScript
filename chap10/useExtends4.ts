@@ -15,11 +15,12 @@ class Greetings {
 	}
 }
 
-class GoodMorning extends Greetings {
-	sayGoodMorning() {
-		console.log(`${this.name}さん、おはようございます`);
+class HelloWithNice extends Greetings {
+	sayHello() {
+		super.sayHello();
+		console.log("よろしくお願いします!");
 	}
 }
-const taro = new GoodMorning("江口太郎");
-taro.sayGoodMorning();
-taro.sayHello();
+
+const saburo = new HelloWithNice("宮西三郎");
+saburo.sayHello();

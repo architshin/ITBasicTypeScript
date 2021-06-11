@@ -35,7 +35,6 @@ class DonutsWithDrink extends Donuts {
 	}
 
 	showOrder() {
-		super.showOrder();
 		console.log(`ドーナツと${this._drinkName}とのセットで合計${this.priceWithDrink}円`);
 	}
 }

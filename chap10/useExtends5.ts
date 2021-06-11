@@ -15,11 +15,19 @@ class Greetings {
 	}
 }
 
-class GoodMorning extends Greetings {
-	sayGoodMorning() {
-		console.log(`${this.name}さん、おはようございます`);
+class HelloWithMsg extends Greetings {
+	msg: string = "";
+
+	constructor(name: string, msg: string) {
+		super(name);
+		this.msg = msg;
+	}
+
+	sayHello() {
+		super.sayHello();
+		console.log(this.msg);
 	}
 }
-const taro = new GoodMorning("江口太郎");
-taro.sayGoodMorning();
-taro.sayHello();
+
+const shiro = new HelloWithMsg("渡辺四郎", "いい天気ですね!");
+shiro.sayHello();

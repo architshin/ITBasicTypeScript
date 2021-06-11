@@ -7,3 +7,6 @@ for(const element of personalData) {
 // personalData[0] = 456;
 // personalData[1] = "こんにちは";
 // personalData[3] = 445;
+
+// personalData.shift();
+// personalData[0].substring(0);
