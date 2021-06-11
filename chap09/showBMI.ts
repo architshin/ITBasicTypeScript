@@ -2,8 +2,8 @@ export{}
 
 class BodyMass {
 	name: string = "";
-	weight: number = 0;
 	height: number = 0;
+	weight: number = 0;
 
 	constructor(name: string, weight: number, height: number) {
 		this.name = name;
@@ -12,7 +12,7 @@ class BodyMass {
 	}
 
 	showBMI() {
-		let bmi = this.weight / (this.height/100) / (this.height/100);
+		let bmi = this.weight / (this.height/100) ** 2;
 		bmi = Math.round(bmi * 10) / 10;
 		console.log(`${this.name}さんのBMI値: ${bmi}`);
 	}
